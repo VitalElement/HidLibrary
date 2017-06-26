@@ -21,8 +21,7 @@ namespace HidLibrary
 
         public void Init()
         {
-            var eventMonitor = new Action(DeviceEventMonitor);
-            eventMonitor.BeginInvoke(DisposeDeviceEventMonitor, eventMonitor);
+            DeviceEventMonitor();
         }
 
         private void DeviceEventMonitor()
